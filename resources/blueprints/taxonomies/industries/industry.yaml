@@ -1,0 +1,41 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: sort_no
+            field:
+              default: '1'
+              type: integer
+              display: 'Sort No.'
+          -
+            handle: video
+            field:
+              container: site_images
+              type: assets
+              display: Video
+              validate:
+                - 'mimes:mp4'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'
+title: Industry

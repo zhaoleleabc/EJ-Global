@@ -1,0 +1,40 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: phone_no
+            field:
+              input_type: tel
+              placeholder: 'Your phone number'
+              character_limit: 21
+              type: text
+              display: 'Phone No.'
+              instructions: 'Your phone number'
+              replicator_preview: false
+              validate:
+                - required
+          -
+            handle: email_address
+            field:
+              input_type: email
+              placeholder: 'Your email address'
+              character_limit: 50
+              type: text
+              display: 'Email Address'
+              instructions: 'Your email address'
+              validate:
+                - required
+                - email
+          -
+            handle: message
+            field:
+              placeholder: 'What’s on your mind and how can we help?'
+              character_limit: 1500
+              type: textarea
+              display: Message
+              instructions: 'What’s on your mind and how can we help?'
+              validate:
+                - required

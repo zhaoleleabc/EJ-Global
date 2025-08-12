@@ -1,0 +1,22 @@
+tree:
+  -
+    id: f4388d4c-77d7-4321-9c0b-c39d94fbf2ea
+    title: Home
+    url: /
+    children:
+      -
+        id: 8478c0f4-6e7d-4d37-89aa-3a78ba8bc729
+        title: Products
+        url: /products
+      -
+        id: c0a7ab32-7e04-4ac0-a4fa-5e9f3946363f
+        title: 'Customer Print'
+        url: /customer-print
+      -
+        id: 69ed9cbf-b371-4618-8e37-4014d77a4478
+        title: 'About EJ ECO'
+        url: about-us
+      -
+        id: d4c84a68-b7fa-455b-9b3b-72b3d00af2c7
+        title: 'Contact Us'
+        url: /contact-us

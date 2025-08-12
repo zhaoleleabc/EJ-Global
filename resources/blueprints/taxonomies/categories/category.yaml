@@ -1,0 +1,58 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: show_in_tab
+            field:
+              options:
+                -
+                  key: 'y'
+                  value: 'Show in tabs'
+                -
+                  key: 'n'
+                  value: 'Hidden in tabs'
+              default: 'n'
+              type: select
+              display: 'Show in Tab'
+              instructions: 'Is it displayed in the top tabs? If not, it belongs to Others.'
+          -
+            handle: icon
+            field:
+              container: site_images
+              type: assets
+              display: Icon
+          -
+            handle: highlight_icon
+            field:
+              container: site_images
+              type: assets
+              display: 'Highlight Icon'
+          -
+            handle: highlight_color
+            field:
+              type: text
+              display: 'Highlight Color'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'
+title: Category

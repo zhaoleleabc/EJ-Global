@@ -1,0 +1,31 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Copyright
+        fields:
+          -
+            handle: copyright
+            field:
+              antlers: true
+              type: text
+              display: Copyright
+          -
+            handle: address
+            field:
+              antlers: true
+              type: text
+              display: Location
+          -
+            handle: tel
+            field:
+              antlers: true
+              type: text
+              display: Tel
+          -
+            handle: email
+            field:
+              antlers: true
+              type: text
+              display: Email

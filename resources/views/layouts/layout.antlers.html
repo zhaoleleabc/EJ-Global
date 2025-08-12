@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#00908F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    {{ vite src="resources/css/app.less|resources/js/app.js" }}
+    <link rel="icon" href="{{ assets src='favicon.webp' }}"/>
+
+
+</head>
+<body class="h-full w-full">
+
+<div class="w-screen  min-h-screen">
+    <div class="w-full bg-amber-300 h-10">
+
+    </div>
+    <main class="bg-white">
+        {{ yield:content }}
+    </main>
+</div>
+
+</body>
+
+</html>

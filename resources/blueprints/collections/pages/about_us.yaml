@@ -1,0 +1,150 @@
+title: 'About Our Culture'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'About Our Culture Section'
+        instructions: 'Including top video configuration, content introduction, and certification logo'
+        fields:
+          -
+            handle: headline
+            field:
+              type: textarea
+              display: Headline
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              default: 'ABOUT EJ ECO'
+              display: Title
+              instructions: 'Section Title'
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              default: |-
+                Where Purpose Meets Innovation 
+                in Food Packaging
+              type: textarea
+              display: Content
+              validate:
+                - required
+          -
+            handle: image_123
+            field:
+              max_files: 1
+              container: site_images
+              type: assets
+              display: Image
+      -
+        display: 'Pillars of Our Culture​ Section'
+        fields:
+          -
+            handle: headline_pillars
+            field:
+              type: textarea
+              display: 'Headline Pillars'
+          -
+            handle: pillars_list
+            field:
+              max_sets: 50
+              type: replicator
+              display: 'Pillars List'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          import: pillars
+      -
+        display: 'Statistics Section'
+        fields:
+          -
+            handle: stata_content
+            field:
+              type: textarea
+              display: 'Stata Content'
+          -
+            handle: content_stata
+            field:
+              type: textarea
+              display: 'Content Stata'
+      -
+        display: 'Building Sustainable Futures Section'
+        fields:
+          -
+            handle: building_sustainable_title
+            field:
+              type: textarea
+              display: 'Building Sustainable Title'
+          -
+            handle: building_sustainable_content
+            field:
+              type: textarea
+              display: 'Building Sustainable Content'
+          -
+            handle: building_list
+            field:
+              max_sets: 50
+              type: replicator
+              display: 'Building List'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          import: buildings
+          -
+            handle: building_list_rev
+            field:
+              max_sets: 50
+              type: replicator
+              display: 'Building List Rev'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          import: buildings
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: 'Template Field'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  new_tab:
+    display: 'New Tab'
+    sections:
+      -
+        display: 'New Section'

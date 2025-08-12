@@ -1,0 +1,218 @@
+{{ extend:"layouts.layout" }}
+{{ section:content }}
+<div class="bg-white flex flex-col justify-start items-center overflow-hidden w-full min-h-screen page-container">
+    {{# About Our Culture #}}
+    <section class="parent w-full max-w-[1600px] px-4 sm:px-8 md:px-16 lg:px-40 pt-14 pb-20 bg-white inline-flex flex-col justify-center items-center gap-14">
+        <div class="self-stretch flex flex-col justify-start items-start gap-6 fade-up">
+            <div class="self-stretch text-center justify-start text-[#2291E0] text-xl sm:text-2xl lg:text-xl font-semibold font-['Montserrat'] uppercase">{{title|nl2br}}</div>
+            <div class="self-stretch text-center justify-start text-black text-4xl lg:text-5xl font-bold font-['Montserrat'] lg:leading-[60px]">{{headline|nl2br}}​</div>
+            <div class="w-full max-w-[1280px] text-center justify-start text-stone-500 text-xl sm:text-xl lg:text-xl font-normal font-['Poppins'] leading-9">{{content|nl2br}}</div>
+        </div>
+        <div class="relative overflow-hidden self-stretch max-w-full rounded-tl-[80px] rounded-tr-2xl rounded-bl-2xl rounded-br-[80px] aspect-[16/7] fade-up">
+            <img class="w-full h-full left-0 top-0 absolute" src="{{ image_123 }}" alt="{{image_123:alt}}">
+        </div>
+    </section>
+    {{# GPillars of Our Culture​ #}}
+    <section class="parent bg-gray-100 w-full inline-flex flex-col justify-center items-center">
+        <div class="w-full max-w-[1600px] inline-flex flex-col justify-start items-start fade-up">
+        <div class="self-stretch px-6 sm:px-16 md:px-24 lg:px-40 pt-20 pb-10 flex flex-col justify-start items-center gap-6">
+            <div class="self-stretch text-center justify-start text-black text-4xl font-semibold font-['Montserrat']">{{headline_pillars}}</div>
+        </div>
+        {{pillars_list}}
+        {{if {{index}} % 2 == 0}}
+        <div class="w-full px-6 sm:px-16 md:px-32 lg:px-40 py-7 inline-flex flex-col lg:flex-row justify-start items-center lg:items-start gap-6 lg:gap-20">
+            <div class="flex-1 w-full self-stretch pt-10 inline-flex flex-col justify-start items-start gap-14">
+            <div class="self-stretch flex flex-col justify-start items-start gap-6 fade-up">
+                <div class="self-stretch text-center lg:text-left justify-start lg:justify-start text-black text-4xl font-semibold font-['Montserrat']">{{pillars_list_title|nl2br}}</div>
+                <div class="self-stretch text-center lg:text-left justify-start text-[#2291E0] text-2xl font-semibold font-['Montserrat']">{{pillars_list_tag|nl2br}}</div>
+                <div class="self-stretch text-center lg:text-left justify-start text-zinc-800 text-lg font-normal font-['Poppins'] leading-[1.875rem]">{{pillars_list_content|nl2br}}</div>
+            </div>
+            </div>
+            <div class="lg:flex-1 w-full sm:w-[600px] relative rounded-2xl overflow-hidden aspect-[25/16] fade-up">
+            <img class="w-full h-full left-0 top-0 absolute rounded-2xl object-cover" src="{{pillars_list_image}}" alt="{{pillars_list_image:alt}}">
+            </div>
+        </div>
+        {{else}}
+        <div class="w-full px-6 sm:px-16 md:px-32 lg:px-40 py-7 inline-flex flex-col lg:flex-row justify-start items-center lg:items-start gap-6 lg:gap-20">
+            <div class="lg:flex-1 w-full sm:w-[600px]  relative rounded-2xl overflow-hidden aspect-[25/16] fade-up">
+            <img class="w-full h-full left-0 top-0 absolute rounded-2xl object-cover" src="{{pillars_list_image}}" alt="{{pillars_list_image:alt}}">
+            </div>
+            <div class="flex-1 w-full self-stretch pt-10 inline-flex flex-col justify-start items-start gap-14">
+            <div class="self-stretch flex flex-col justify-start items-start gap-6 fade-up">
+                <div class="self-stretch text-center lg:text-left text-black text-4xl font-semibold font-['Montserrat']">{{pillars_list_title|nl2br}}</div>
+                <div class="self-stretch text-center lg:text-left text-[#2291E0] text-2xl font-semibold font-['Montserrat']">{{pillars_list_tag|nl2br}}</div>
+                <div class="self-stretch text-center lg:text-left text-zinc-800 text-lg font-normal font-['Poppins'] leading-[1.875rem]">{{pillars_list_content|nl2br}}</div>
+            </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/pillars_list}}
+        </div>
+    </section>
+    {{# Statistics #}}
+    <section class="parent w-full h-auto lg:h-[600px] bg-[rgb(11,45,112)] inline-flex justify-center items-center">
+        <div class="w-full max-w-[1600px] h-auto lg:h-[600px] px-6 sm:px-16 lg:px-40 py-24  inline-flex justify-start items-center gap-20">
+            <div class="flex-1 inline-flex flex-col justify-start items-start gap-7 fade-up">
+                <div class="self-stretch text-center justify-start">
+                    <span class="test text-white text-2xl md:text-4xl font-['Montserrat'] md:leading-[52px] number">{{content_stata|nl2br}}</span>
+                </div>
+                <div class="w-full max-w-[1280px] opacity-70 text-center justify-start text-white text-lg sm:text-xl font-normal font-['Poppins'] leading-9 fade-up">{{stata_content|nl2br}}</div>
+            </div>
+        </div>
+    </section>
+    {{# Building Sustainable Futures #}}
+    <section class="parent max-w-[1600px] bg-white inline-flex flex-col justify-center items-center section-container">
+        <div class="self-stretch px-4 md:px-8 lg:px-16 xl:px-40 pt-8 md:pt-12 lg:pt-14 pb-6 md:pb-8 lg:pb-10 inline-flex flex-col lg:flex-row justify-start items-center lg:items-start gap-8 md:gap-12 lg:gap-20  fade-up">
+            <div class="w-full text-center lg:text-left lg:w-[480px] justify-start text-black text-2xl md:text-3xl lg:text-4xl font-semibold font-['Montserrat'] fade-up">{{building_sustainable_title|nl2br}}</div>
+            <div class="flex-1 text-center lg:text-left justify-start text-zinc-800 text-lg font-normal font-['Poppins'] leading-[1.875rem] fade-up">{{building_sustainable_content|nl2br}}</div>
+        </div>
+        <div class="px-4 md:px-8 lg:px-16 xl:px-40 pt-3 md:pt-5 pb-12 md:pb-16 lg:pb-24 bg-white inline-flex justify-center items-center gap-4 md:gap-6 lg:gap-7">
+            <div class="flex-1 flex justify-center items-center flex-wrap content-center overflow-hidden">
+                {{building_list}}
+                <div class="w-80 h-80 outline outline-4 outline-offset-[-2px] outline-white object-cover overflow-hidden relative fade-up">
+                    <img class="w-80 h-80 outline outline-4 outline-offset-[-2px] outline-white" src="{{ building_image }}" alt="{{building_image:alt}}"></img>
+                </div>
+                <div class="w-80 h-80 p-10 
+                {{if {{index}} == "0"}}
+                    bg-sky-500
+                {{elseif {{index}} == "1"}}
+                    bg-amber-300  
+                {{/if}}
+                outline outline-4 outline-offset-[-2px] outline-white inline-flex flex-col justify-between items-start fade-up">
+                    <div class="self-stretch flex flex-col justify-start items-start gap-5">
+                        <div class="self-stretch justify-start 
+                        {{if {{index}} == "0"}}
+                            text-white
+                        {{elseif {{index}} == "1"}}
+                            text-zinc-800
+                        {{/if}}
+                        text-2xl font-bold font-['Montserrat']">{{building_title|nl2br}}</div>
+                        <div class="self-stretch justify-center 
+                        {{if {{index}} == "0"}}
+                            text-white/70
+                        {{elseif {{index}} == "1"}}
+                            text-stone-500
+                        {{/if}}
+                        text-sm font-normal font-['Poppins'] leading-normal">{{building_content|nl2br}}</div>
+                    </div>
+                    <div class="w-10 h-0 outline outline-2 outline-offset-[-1px]
+                        {{if {{index}} == "0"}}
+                            outline-white
+                        {{elseif {{index}} == "1"}}
+                           outline-zinc-800
+                        {{/if}}
+                   "></div>
+                </div>
+                {{/building_list}}
+                {{building_list_rev}}
+                <div class="w-80 h-80 p-10
+                    {{if {{index}} == "0"}}
+                        bg-sky-900
+                    {{elseif {{index}} == "1"}}
+                        bg-cyan-600
+                    {{/if}} 
+                    outline outline-4 outline-offset-[-2px] outline-white inline-flex flex-col justify-between items-start fade-up">
+                    <div class="self-stretch flex flex-col justify-start items-start gap-5">
+                        <div class="self-stretch justify-start text-white text-2xl font-bold font-['Montserrat']">{{building_title|nl2br}}​</div>
+                        <div class="self-stretch justify-center text-white/70 text-sm font-normal font-['Poppins'] leading-normal">{{building_content|nl2br}}</div>
+                    </div>
+                    <div class="w-10 h-0 outline outline-2 outline-offset-[-1px] outline-white"></div>
+                </div>
+                <div class="w-80 h-80 outline outline-4 outline-offset-[-2px] outline-white object-cover overflow-hidden relative fade-up">
+                    <img class="w-80 h-80 outline outline-4 outline-offset-[-2px] outline-white" src="{{ building_image }}" alt="{{building_image:alt}}"></img>
+                </div>
+                {{/building_list_rev}}
+            </div>
+        </div>
+    </section>
+</div>
+<style>
+    img {
+        transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    img:hover{
+        transform: scale(1.10);
+    }
+    @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    .fade-up.visible {
+        opacity: 0;
+        animation: fadeUp 2s forwards; /* 动画持续时间1秒 */
+    }
+    .fade-up:nth-child(1) {
+    animation-delay: 0.2s;
+    }
+    .fade-up:nth-child(2) {
+    animation-delay: 0.4s;
+    }
+    .fade-up:nth-child(3) {
+    animation-delay: 0.6s;
+    }
+    .fade-up:nth-child(4) {
+    animation-delay: 0.8s;
+    }
+    .fade-up:nth-child(5) {
+    animation-delay: 1.0s;
+    }
+    .fade-up:nth-child(6) {
+    animation-delay: 1.2s;
+    }
+    .fade-up:nth-child(7) {
+    animation-delay:1.4s;
+    }
+    .fade-up:nth-child(8) {
+    animation-delay: 1.6s;
+    }
+    .fade-up:nth-child(9) {
+    animation-delay: 1.8s;
+    }
+    .fade-up:nth-child(10) {
+    animation-delay: 2.0s;
+    }
+    /* 可以继续添加更多延迟，按需修改 */
+</style>
+<script>
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 父元素进入视图时，为其子元素添加类名以启动动画
+                const parent = entry.target;
+                const fadeUpElements = parent.querySelectorAll('.fade-up');
+                fadeUpElements.forEach(element => {
+                    element.classList.add('visible');
+                });
+
+                // 停止观察该父元素
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold:  0
+    });
+    // 选中所有需要触发动画的父元素
+    const parentElements = document.querySelectorAll('.parent'); 
+    // 为每个父元素添加观察
+    parentElements.forEach(element => {
+        observer.observe(element);
+    });
+//获取数字
+   document.addEventListener('DOMContentLoaded', function () {
+    let elements = document.querySelectorAll('.number');
+    
+    elements.forEach(function(element) {
+        let text = element.innerHTML;
+        text = text.replace(/(\d{1,3}(?:,\d{3})*\+?|\d+)/g, '<span class="text-[#FFCE47]">\$1</span>');
+        element.innerHTML = text;
+    });
+});
+</script>
+{{ /section:content }}
+

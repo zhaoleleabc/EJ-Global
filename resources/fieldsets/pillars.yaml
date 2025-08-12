@@ -1,0 +1,24 @@
+title: Pillars
+fields:
+  -
+    handle: pillars_list_title
+    field:
+      type: textarea
+      display: 'Pillars List Title'
+  -
+    handle: pillars_list_tag
+    field:
+      type: textarea
+      display: 'Pillars List Tag'
+  -
+    handle: pillars_list_content
+    field:
+      type: textarea
+      display: 'Pillars List Content'
+  -
+    handle: pillars_list_image
+    field:
+      max_files: 1
+      container: site_images
+      type: assets
+      display: 'Pillars List Image'
