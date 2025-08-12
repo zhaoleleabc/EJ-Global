@@ -1,0 +1,19 @@
+title: Buildings
+fields:
+  -
+    handle: building_title
+    field:
+      type: textarea
+      display: 'Building Title'
+  -
+    handle: building_content
+    field:
+      type: textarea
+      display: 'Building Content'
+  -
+    handle: building_image
+    field:
+      container: site_images
+      type: assets
+      display: 'Building Image'
+      max_files: 1

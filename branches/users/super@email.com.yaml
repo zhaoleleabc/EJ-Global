@@ -1,0 +1,21 @@
+name: super-admin
+super: true
+id: c17ce7ce-8835-42fe-9517-5c131d292dea
+password_hash: $2y$12$yktimUCo9uDvGFBWfvTB7uXIxsPIR6PDTW1tKTsfDA.cdO5kZu54.
+preferences:
+  forms:
+    enquiry_form:
+      columns:
+        - datestamp
+        - phone_no
+        - email_address
+        - message
+  assets:
+    site_images:
+      per_page: 25
+  taxonomies:
+    categories:
+      columns:
+        - title
+        - slug
+        - show_in_tab
